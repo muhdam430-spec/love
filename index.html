@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Awak ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9ec4, #ffcfe3);
+            font-family: "Arial", sans-serif;
+            overflow: hidden;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            margin-top: 80px;
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff5fa2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 80%;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .card {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            display: inline-block;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #fff;
+            color: #ff4f93;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* LOVE FALLING ANIMATION */
+        .heart {
+            position: fixed;
+            top: -10%;
+            color: #ff4f93;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); }
+            100% { transform: translateY(110vh) translateX(20px); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hai Sayang ❤️</h1>
+
+    <div class="card">
+        <p>
+            Saya buat laman ni khas untuk awak…  
+            sebab setiap hari dengan awak rasa indah.  
+            Terima kasih sebab hadir dalam hidup saya.  
+            Awak sangat istimewa 💖
+        </p>
+
+        <a class="btn" href="#" onclick="alert('Saya sayang awak ❤️')">
+            Tekan sini 💕
+        </a>
+    </div>
+
+    <script>
+        // Generate falling hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
